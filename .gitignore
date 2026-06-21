@@ -1,0 +1,40 @@
+# ===== 防御性忽略：杜绝敏感信息/状态/历史误入库 =====
+# 本仓库只手动纳入精选 dotfile（每个目录是一个 stow 包），
+# 下列规则用于兜底，防止 git add . 时意外带入隐私或机器状态。
+
+# 凭据 / 密钥 / 令牌
+*.key
+*.pem
+*.p12
+*.pfx
+*.gpg
+*.asc
+id_rsa*
+id_ed25519*
+*_token*
+*secret*
+*credential*
+.netrc
+.npmrc
+.pypirc
+
+# 历史记录 / 本地状态
+*history*
+*.bak
+*.bak-*
+.viminfo
+.histfile
+.pulse-cookie
+.python_history
+.lesshst
+
+# 含隐私/机器专属的 KDE/akonadi 配置（即便有人手滑也不收）
+*emailidentities*
+*akonadi*
+*kwallet*
+kwinoutputconfig.json
+
+# 编辑器/系统杂物
+.DS_Store
+*.swp
+*~
