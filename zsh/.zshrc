@@ -2,6 +2,7 @@
 
 #环境变量
 export PATH="$HOME/.local/bin:$PATH"
+export GPG_TTY=$(tty)   # GPG 签名时 pinentry 需要知道当前 tty
 
 # ===== 历史记录 =====
 HISTFILE=~/.histfile
