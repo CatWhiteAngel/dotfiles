@@ -1,7 +1,7 @@
-[user]
-	name = CatWhiteAngel
-	email = 30596187+CatWhiteAngel@users.noreply.github.com
-	signingkey = C8DD1251A555016E
+# 个人身份(name/email/signingkey)放在不入库的 ~/.gitconfig.local
+# 换机后复制 git/.gitconfig.local.example 为 ~/.gitconfig.local 并填写
+[include]
+	path = ~/.gitconfig.local
 
 [init]
 	defaultBranch = main

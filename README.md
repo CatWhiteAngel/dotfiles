@@ -28,6 +28,17 @@ stow zsh git vim bash konsole fontconfig
 
 Install a single package: `stow konsole`. Uninstall (remove symlinks): `stow -D konsole`.
 
+### Personal identity (one-time, per machine)
+
+Git identity (name / email / signing key) lives in `~/.gitconfig.local`, which is **not** tracked. The repo's `git/.gitconfig` just `include`s it. On a new machine, create it from the template:
+
+```sh
+cp ~/dotfiles/git/.gitconfig.local.example ~/.gitconfig.local
+chmod 600 ~/.gitconfig.local            # then edit in your name/email/signingkey
+```
+
+A missing `~/.gitconfig.local` is silently ignored by git, so the rest of the config still works.
+
 ## Deliberately excluded
 
 The following are auto-generated machine state or contain private data, and are **not** tracked:

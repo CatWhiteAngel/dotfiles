@@ -18,6 +18,10 @@ id_ed25519*
 .npmrc
 .pypirc
 
+# 个人身份本地覆盖文件（含 name/email/signingkey），只保留 .example 模板
+.gitconfig.local
+*/.gitconfig.local
+
 # 历史记录 / 本地状态
 *history*
 *.bak

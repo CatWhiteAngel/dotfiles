@@ -1,0 +1,7 @@
+# 复制为 ~/.gitconfig.local 并填入你自己的身份（此文件不入库）
+# Copy to ~/.gitconfig.local and fill in your own identity (this file is NOT tracked)
+[user]
+	name = Your Name
+	email = you@example.com
+	# GPG 签名子钥 ID；不签名可删掉此行 / GPG signing subkey ID, drop this line if not signing
+	signingkey = YOUR_SIGNING_KEY_ID

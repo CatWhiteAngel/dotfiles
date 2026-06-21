@@ -28,6 +28,17 @@ stow zsh git vim bash konsole fontconfig
 
 单独装某个包：`stow konsole`。卸载（删软链）：`stow -D konsole`。
 
+### 个人身份（每台机器一次）
+
+Git 身份（name / email / 签名子钥）放在 `~/.gitconfig.local`，**不入库**；仓库里的 `git/.gitconfig` 只用 `include` 引用它。换机时从模板创建：
+
+```sh
+cp ~/dotfiles/git/.gitconfig.local.example ~/.gitconfig.local
+chmod 600 ~/.gitconfig.local            # 然后填入你的 name/email/signingkey
+```
+
+`~/.gitconfig.local` 不存在时 git 会静默忽略该 include，其余配置照常生效。
+
 ## 刻意未纳入
 
 以下属 KDE/程序自动生成的机器状态或含隐私，**不入库**：
